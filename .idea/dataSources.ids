@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - uniquexoriginators@xxxunique.com" uuid="0d88e1a7-f2ae-40d5-b23a-2d9bba8b79b2">
+    <database-info product="MySQL" version="5.5.45-cll-lve" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="uniquexoriginators"/>
+      <table id="2" parent="1" name="ux_category"/>
+      <table id="3" parent="1" name="ux_country"/>
+      <table id="4" parent="1" name="ux_group"/>
+      <table id="5" parent="1" name="ux_group_message"/>
+      <table id="6" parent="1" name="ux_hotshot_blog"/>
+      <table id="7" parent="1" name="ux_hotshot_type"/>
+      <table id="8" parent="1" name="ux_image"/>
+      <table id="9" parent="1" name="ux_joke"/>
+      <table id="10" parent="1" name="ux_joke_category"/>
+      <table id="11" parent="1" name="ux_message"/>
+      <table id="12" parent="1" name="ux_pornstar"/>
+      <table id="13" parent="1" name="ux_video"/>
+      <column id="14" parent="2" name="category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="16" parent="2" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="2" name="image">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="18" parent="2" name="category_id">
+        <columns>category_id</columns>
+        <unique>1</unique>
+      </index>
+      <key id="19" parent="2" name="category_id">
+        <columns>category_id</columns>
+        <underlying-index>category_id</underlying-index>
+      </key>
+      <key id="20" parent="2" name="PRIMARY">
+        <columns>category_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="3" name="country_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="22" parent="3" name="country_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="23" parent="3" name="country_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="24" parent="3" name="flag_image_path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="25" parent="3" name="status">
+        <comment>1 for active</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="26" parent="3" name="PRIMARY">
+        <columns>country_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="27" parent="4" name="group_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="28" parent="4" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="29" parent="4" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="30" parent="4" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="31" parent="4" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="32" parent="4" name="member_user_ids">
+        <comment>members user ids</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <key id="33" parent="4" name="PRIMARY">
+        <columns>group_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="34" parent="5" name="group_mess_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="5" name="group_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="5" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="5" name="message_text">
+        <mandatory>1</mandatory>
+        <data-type>varchar(5000)</data-type>
+      </column>
+      <column id="38" parent="5" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="39" parent="5" name="status">
+        <comment>1 for active</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="40" parent="5" name="PRIMARY">
+        <columns>group_mess_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="41" parent="6" name="hotshot_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="6" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="6" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="44" parent="6" name="content_with_html">
+        <mandatory>1</mandatory>
+        <data-type>varchar(5000)</data-type>
+      </column>
+      <column id="45" parent="6" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="46" parent="6" name="status">
+        <comment>1 active</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="47" parent="6" name="hotshot_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="48" parent="6" name="PRIMARY">
+        <columns>hotshot_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="49" parent="7" name="hotshot_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="7" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="51" parent="7" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="52" parent="7" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="53" parent="7" name="PRIMARY">
+        <columns>hotshot_type_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="54" parent="8" name="image_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="55" parent="8" name="name">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="56" parent="8" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="57" parent="8" name="country_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="58" parent="8" name="category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="59" parent="8" name="time_upload">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="60" parent="8" name="delete">
+        <comment>1 for deleted</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="61" parent="8" name="image_path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="62" parent="8" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="63" parent="8" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="64" parent="8" name="PRIMARY">
+        <columns>image_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="65" parent="9" name="joke_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="66" parent="9" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="67" parent="9" name="title">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="68" parent="9" name="joke_text">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="69" parent="9" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="70" parent="9" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="9" name="joke_category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="72" parent="9" name="PRIMARY">
+        <columns>joke_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="73" parent="10" name="joke_category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="10" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="75" parent="10" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="10" name="image">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="77" parent="10" name="PRIMARY">
+        <columns>joke_category_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="78" parent="11" name="message_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="79" parent="11" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="80" parent="11" name="to_user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="81" parent="11" name="text">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2500)</data-type>
+      </column>
+      <column id="82" parent="11" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="83" parent="11" name="seen">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="84" parent="11" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="85" parent="11" name="PRIMARY">
+        <columns>message_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="12" name="pornstar_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="87" parent="12" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="88" parent="12" name="image">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="89" parent="12" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="90" parent="12" name="country_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="91" parent="12" name="PRIMARY">
+        <columns>pornstar_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="92" parent="13" name="video_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="13" name="video_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="94" parent="13" name="pornstar_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="13" name="description">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="96" parent="13" name="country_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="97" parent="13" name="category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="98" parent="13" name="time_upload">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="99" parent="13" name="delete">
+        <comment>1 for delete</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="100" parent="13" name="path_video">
+        <comment>related path to the video</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="101" parent="13" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="102" parent="13" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="13" name="thumbnail">
+        <comment>related path to thumbnailimage</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="104" parent="13" name="PRIMARY">
+        <columns>video_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
